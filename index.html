@@ -7,6 +7,7 @@
   <meta name="robots" content="index, follow">
   <meta name="description" content="DVRIEDAMLUXURY video">
   <link rel="canonical" href="https://www.dvriedam.lt/">
+  <script src="https://cdn.jsdelivr.net/npm/playerjs@1/player.min.js"></script>
   <style>
     body {
       margin: 0;
@@ -16,19 +17,23 @@
       align-items: center;
       height: 100vh;
     }
-    video {
-      max-width: 100%;
-      height: auto;
-      background: #111;
+    #player {
+      width: 90%;
+      max-width: 720px;
+      aspect-ratio: 16 / 9;
     }
   </style>
 </head>
 <body>
 
-  <video controls autoplay>
-    <source src="https://pixeldrain.com/api/file/BRg9ykeg" type="video/mp4">
-    Ваш браузер не поддерживает видео.
-  </video>
+  <div id="player"></div>
+
+  <script>
+    var player = new Playerjs({
+      id: "player",
+      file: "https://pixeldrain.com/api/file/BRg9ykeg?dowload"
+    });
+  </script>
 
 </body>
 </html>
